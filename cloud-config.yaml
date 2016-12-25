@@ -1,5 +1,0 @@
-#cloud-config
-
-# include one or more SSH public keys
-ssh_authorized_keys:
-  - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4Ew8YYQYX+HMQNU+IkBLmL3HjWQ5WpNoy+XpIUF5JvAKvlf0KQEm3D6v+jho8mEPcdqbgQnUCDu2Bmj79QOzNDz1JaP1ocWtkxe99+Wd5XMu2iHfvHMRGr+3kV6v5H6wGA1uxXkKBlMjrZBo3NPJ8n8U1PZsd+FZdfR61QEIVhZbnlVn2/1GNOkN/CNXlAMtRmUvyvI84oOsGqI3fqsD6P/8ubDO+IcYZbTOkeg50u4CItZfhJDtuxEVPiSYcC6b+l7qUCYVxfFvBVTBaBT7nU0w+mJl8LO/6r0w0YOpssdaj3KK2evCwHLNQlt20/9ecv5myPIzxjpDgoU6o37Xnw==
