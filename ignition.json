@@ -1,0 +1,31 @@
+{
+  "ignition": {
+    "config": {},
+    "timeouts": {},
+    "version": "2.1.0"
+  },
+  "networkd": {
+    "units": [
+      {
+        "contents": "[Match]\nName=ens192\n\n[Network]\nAddress=10.0.1.45/8\nGateway=10.0.0.1\ndns=10.0.0.65\ndns=10.0.0.64",
+        "name": "static.network"
+      }
+    ]
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtTrfDQ3hp988Vu9guHds3RC9rm69FI/SYxYXajqHkhVFmiveffkqptcSXZadjgukKyCh+3Lunuakb1Z2HvglRIQ7eHUT72C2TNJTFkHg7s3iT/STykfTBIWvDao10sIty5qgSvUCWrEMW9EB6mN79QS+H3zDa7t49QlYyBgNOnps9+5HJ8Tn8mtOoyH5bRimvfOpTbJ0TpoZh+6f9v3cBFTlvWs9jMip9x2WLjqL/A3gDOi2CHWn2BtqbdZ0JBfADklD5GrWZl5S1onexNqjTKBw511m7xWAS8pqxIekpnmueUNJ3CVBYQTdhfpWURn7szLUxkHo78OpIM9go9XZ9Q=="
+        ],
+		"groups": [
+          "sudo",
+          "docker"
+        ]
+      }
+    ]
+  },
+  "storage": {},
+  "systemd": {}
+}
