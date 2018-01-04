@@ -1,0 +1,25 @@
+# This config is meant to be consumed by the config transpiler, which will
+# generate the corresponding Ignition config. Do not pass this config directly
+# to instances of Container Linux.
+
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - AAAAB3NzaC1yc2EAAAABIwAAAQEAtTrfDQ3hp988Vu9guHds3RC9rm69FI/SYxYXajqHkhVFmiveffkqptcSXZadjgukKyCh+3Lunuakb1Z2HvglRIQ7eHUT72C2TNJTFkHg7s3iT/STykfTBIWvDao10sIty5qgSvUCWrEMW9EB6mN79QS+H3zDa7t49QlYyBgNOnps9+5HJ8Tn8mtOoyH5bRimvfOpTbJ0TpoZh+6f9v3cBFTlvWs9jMip9x2WLjqL/A3gDOi2CHWn2BtqbdZ0JBfADklD5GrWZl5S1onexNqjTKBw511m7xWAS8pqxIekpnmueUNJ3CVBYQTdhfpWURn7szLUxkHo78OpIM9go9XZ9Q==
+	  groups:
+	    - sudo
+		- docker
+		
+networkd:
+  units:
+    - name: static.network
+      contents: |
+        [Match]
+        Name=ens192
+
+        [Network]
+        Address=10.0.1.45/8
+        Gateway=10.0.0.1
+		dns=10.0.0.65
+		dns=10.0.0.64
